@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Mod Chat Saver
 // @namespace    http://www.reddit.com/u/vCarbonnn
-// @version      1.0
+// @updateURL    https://github.com/vCarbonnn/ModChatSaver/raw/master/ModChatSaver.user.js
+// @version      1.1
 // @description  Enables TagPro moderators to save users chat.
 // @author       Carbon
 // @include      http://tagpro-*.koalabeast.com/moderate/chat*
 // ==/UserScript==
 
-var VERSION = "Version 1.0";
+var VERSION = "Version 1.1";
 var baseKey;
 var fullChat = "";
 var savedCount = 0;
@@ -53,14 +54,14 @@ function setUpButtons(removeButtons) {
 		count--;
 		document.getElementById("loadChatButton").addEventListener('click', function() {
 			document.getElementById("loadChatButton").disabled = true;
-		    $(".buttons").append("<select id='savedChatDropDown' class='small'></select>");
-		    document.getElementById("savedChatDropDown").style.marginLeft = "10px";
-		    document.getElementById("savedChatDropDown").appendChild(new Option("Now", "Now"));
-		    for(var i=0; i<=count; i++) {
-		    	var keyToAdd = baseKey + "_" + i;
-		    	addOptionToSelect(keyToAdd);
-		    }
-		    document.getElementById("savedChatDropDown").addEventListener("click", dropDownSelected);
+			$(".buttons").append("<select id='savedChatDropDown' class='small'></select>");
+			document.getElementById("savedChatDropDown").style.marginLeft = "10px";
+			document.getElementById("savedChatDropDown").appendChild(new Option("Now", "Now"));
+			for(var i=0; i<=count; i++) {
+				var keyToAdd = baseKey + "_" + i;
+				addOptionToSelect(keyToAdd);
+		    	}
+		    	document.getElementById("savedChatDropDown").addEventListener("click", dropDownSelected);
 		});
 	}
 	$(".buttons").append("<button id='saveChatButton' class='small'>Save Chat</button>");
