@@ -2,10 +2,10 @@
 // @name         Mod Chat Saver
 // @namespace    http://www.reddit.com/u/vCarbonnn
 // @updateURL    https://github.com/vCarbonnn/ModChatSaver/raw/master/ModChatSaver.user.js
-// @version      1.1
+// @version      1.2
 // @description  Enables TagPro moderators to save users chat.
 // @author       Carbon
-// @include      http://tagpro-*.koalabeast.com/moderate/chat*
+// @include      *://tagpro*.koalabeast.com/moderate/chat*
 // ==/UserScript==
 
 var VERSION = "Version 1.1";
